@@ -1,10 +1,15 @@
 import React from "react";
 
-const Search = () => {
+const Search = ({ search, onHandleChange }) => {
   return (
     <div className="search-form">
       <form>
-        <input type="text" placeholder="Search Profile..." />
+        <input
+          type="text"
+          value={search}
+          onChange={onHandleChange}
+          placeholder="Search Profile..."
+        />
         <button>Search Profile</button>
       </form>
     </div>
